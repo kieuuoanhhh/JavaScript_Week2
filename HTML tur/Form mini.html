@@ -23,7 +23,7 @@
             <div class="form-group">
                 <label for="fullname" class="form-label"> Họ và tên </label>
                 <input id="fullname" name="fullname" type="text" placeholder="VD : Kiều Oanh" class="form-control">
-                <span class="form-mesage"></span>
+                <span class="form-message"></span>
             </div>
 
             <div class="form-group">
@@ -49,13 +49,19 @@
 
         </form>
     </div>
+    <script src="../JS/validator.js"></script>
     <script>
         // Vali
         Validator({
             form:'#form-1',
+            errorSelector:'.form-message',
             rules :[
-                Validator.isRequired('#fullname'),
-                Validator.isEmail('#emai')
+                Validator.isRequired('#fullname'),/*ktra user da nhapchua*/
+                Validator.isEmail('#email'),
+                Validator.minLength('#password',6),
+                Validator.isConfirmed('#password_confirmation',function(){
+                    return document.querySelector('#form-1 #password').value;
+                }),
         ]
         })
     </script>
