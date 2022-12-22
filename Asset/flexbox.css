@@ -1,0 +1,146 @@
+* {
+    box-sizing: border-box;
+    border-radius: 2px;
+}
+
+.flex-container {
+    display: flex;
+    background-color: #fea1bf;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.flex-item {
+    background-color: aliceblue;
+    text-align: center;
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+    margin: 10px;
+    line-height: 40px;
+}
+
+.flex-container1 {
+    margin-top: 40px;
+    display: flex;
+    background-color: #fea1bf;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.flex-item-left{
+    display: flex;
+     margin-left: 10px;
+    
+}
+.flex-item-right{
+    display: flex;
+}
+.flex-container1 .flex-item-right .flex-item,
+.flex-container1 .flex-item-left .flex-item{
+    width: 100px;
+}
+.flex-item-active{
+    background-color: #ffc6d3;
+}
+/* Footer*/
+.modal_header{
+    display: flex;
+    justify-content: space-between;
+    background-color: #fea1bf;
+    
+}
+.modal_header_item{
+    width:140px;
+}
+.cancel__action{
+    margin-left: auto;
+}
+/* Form */ 
+.form-container{
+    background-color: #ccc;
+    outline: navajowhite;
+    align-items: center;
+
+}
+.form_row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form_input{
+    outline: none;
+    flex:1 1 auto ;
+    border-radius: 40px;
+    height: 40px;
+    padding-left: 20px;
+    
+}
+.flex-item-btn{
+    border-radius: 20px;
+    width: 100px;
+    background-color: #138bd6;
+    color: #fff;
+    
+}
+/* Action List*/
+.flex-container3{
+    display: flex;
+    background-color: #fea1bf;
+}
+.flex-item-list{
+   
+    text-align: center;
+    font-size: 20px;
+    width: 100px;
+    height: 40px;
+    color: #fff;
+    line-height: 40px;
+    flex:1;
+}
+/*Content in Card*/
+.card{
+    display: flex;
+    flex-direction: column;
+}
+.card_main{
+    margin: 20px;
+}
+.card_content{
+    display: flex;
+    align-items: center;
+    
+}
+@media (min-width: 800px) {
+  .card {
+    flex-direction: row;
+  }
+}
+/* Flex*/
+.parent{
+    display: flex;
+
+}
+.child{
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    background-color: #007494;
+    padding: 20px;
+    color: white;
+}
+.child_three{
+    flex-grow: 1;
+    background-color: #3d9970;
+}
+/*Responsive with Flexbox*/
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+}
+.column{
+    flex-basis: 25%;
+    max-width: 25%;
+}
