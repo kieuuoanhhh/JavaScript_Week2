@@ -303,3 +303,108 @@
   font-size: 30px;
   
 }
+
+/* Wrap*/
+.wrap{
+    display: grid;
+}
+.slide{
+    background-color: #ffc6d3;
+    justify-content: space-between;
+
+}
+.form-wrapper{
+    gap: 20px;
+    background-color: #fff;
+}
+.name{
+    display: grid;
+}
+.form-message input{
+    height: 100px;
+}
+@media (min-width:800px){
+.wrap{
+    display: grid;
+    grid-template-columns: 200px 1fr;
+}
+
+.form-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 16px;
+  }
+  .form-message,
+  .form-button {
+    grid-column: 1 / 3; /* để nó full độ rộng màn hình */
+  }
+}
+/* Grid-template : */
+.grid-container5 .item1 {
+  grid-area: myArea;
+}
+
+.grid-container5 {
+  display: grid;
+  grid-template-areas: 'myArea  myArea myArea myArea';
+  grid-gap: 10px;
+  background-color: #2196F3;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+.grid-container5 > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
+/*grid-column-start*/
+.grid-container6 {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-gap: 10px;
+  background-color: #2196F3;
+  padding: 10px;
+}
+
+.grid-container6 > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
+
+.grid-container6 .item1 {
+  grid-column-start: 2;
+}
+/*align-items*/
+#main {
+  
+  height: 300px;
+  border: 1px solid black; 
+  display: flex;
+  align-items: center;
+}
+
+#main div {
+  flex: 1;
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+}
+
+#main1 {
+  background-color:#FFFFFF;
+  width: 100%;
+  height: 300px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  
+}
+
+#main1 div {
+  width: 100%;
+  height: 40px; 
+}
